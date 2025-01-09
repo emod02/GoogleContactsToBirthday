@@ -36,9 +36,9 @@ def generate_ical_from_csv(csv_file, ical_file):
 
             # Create the calendar entry
             if middle_name == "":
-                summary = f"Geburtstag {first_name} {last_name}".strip()
+                summary = f"{first_name} {last_name} Geburtstag".strip()
             else:
-                summary = f"Geburtstag {first_name} {middle_name} {last_name}".strip()
+                summary = f"{first_name} {middle_name} {last_name} Geburtstag".strip()
             uid = f"{first_name.lower()}-{last_name.lower()}-{start_date}@example.com".replace(" ", "")
 
             f.write("BEGIN:VEVENT\n")
